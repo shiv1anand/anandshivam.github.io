@@ -12,10 +12,60 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: #f8f9fa;
+            background: #f5f7fa;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2563eb;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
         }
 
         .container {
@@ -24,329 +74,462 @@
             padding: 0 20px;
         }
 
-        /* Header/Hero Section */
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 100px 0 80px;
-            text-align: center;
-        }
-
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 5px solid white;
-            margin-bottom: 20px;
-            object-fit: cover;
-            background: rgba(255,255,255,0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 60px;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .tagline {
-            font-size: 1.2rem;
-            opacity: 0.95;
-            margin-bottom: 30px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            margin-top: 30px;
-        }
-
-        .social-links a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 25px;
-            border: 2px solid white;
-            border-radius: 25px;
-            transition: all 0.3s;
-            font-size: 0.9rem;
-        }
-
-        .social-links a:hover {
-            background: white;
-            color: #667eea;
-        }
-
-        /* Section Styles */
-        section {
-            padding: 60px 0;
-        }
-
-        .section-title {
-            font-size: 2rem;
-            margin-bottom: 40px;
-            text-align: center;
-            color: #2d3748;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 3px;
-            background: #667eea;
-            margin: 15px auto 0;
-        }
-
-        /* About Section */
-        .about-content {
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            max-width: 900px;
+        .hero-content {
+            max-width: 800px;
             margin: 0 auto;
         }
 
-        .about-content p {
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+
+        .hero .tagline {
             font-size: 1.1rem;
-            color: #555;
+            opacity: 0.9;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #1e40af;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255,255,255,0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #1e40af;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: #1e293b;
+            margin-bottom: 10px;
+        }
+
+        .section-header .underline {
+            width: 80px;
+            height: 4px;
+            background: #3b82f6;
+            margin: 0 auto;
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            color: #475569;
+            line-height: 1.9;
+        }
+
+        .about-content p {
             margin-bottom: 20px;
         }
 
         /* Skills Section */
+        .skills-section {
+            padding: 80px 0;
+            background: #f8fafc;
+        }
+
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
-            max-width: 900px;
-            margin: 0 auto;
+            margin-top: 50px;
         }
 
-        .skill-category {
+        .skill-card {
             background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+            border-top: 4px solid #3b82f6;
         }
 
-        .skill-category h3 {
-            color: #667eea;
-            margin-bottom: 15px;
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .skill-card h3 {
+            color: #1e40af;
             font-size: 1.3rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        .skill-category ul {
+        .skill-card .icon {
+            font-size: 1.5rem;
+        }
+
+        .skill-list {
             list-style: none;
         }
 
-        .skill-category li {
-            padding: 8px 0;
-            color: #555;
-            border-bottom: 1px solid #eee;
+        .skill-list li {
+            padding: 10px 0;
+            color: #64748b;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 1rem;
         }
 
-        .skill-category li:last-child {
+        .skill-list li:last-child {
             border-bottom: none;
         }
 
         /* Projects Section */
+        .projects-section {
+            padding: 80px 0;
+            background: white;
+        }
+
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
         }
 
         .project-card {
             background: white;
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            border: 1px solid #e2e8f0;
         }
 
         .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
         }
 
-        .project-card h3 {
-            color: #667eea;
-            margin-bottom: 15px;
-            font-size: 1.4rem;
+        .project-header {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            padding: 30px;
+            color: white;
         }
 
-        .project-card p {
-            color: #666;
-            margin-bottom: 15px;
+        .project-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .project-body {
+            padding: 30px;
+        }
+
+        .project-body p {
+            color: #475569;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .project-body h4 {
+            color: #1e293b;
+            margin: 20px 0 10px;
+            font-size: 1.1rem;
+        }
+
+        .project-body ul {
+            color: #64748b;
+            padding-left: 20px;
+        }
+
+        .project-body ul li {
+            margin-bottom: 8px;
         }
 
         .project-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-            margin-top: 15px;
+            margin-top: 20px;
         }
 
         .tag {
-            background: #f0f4ff;
-            color: #667eea;
-            padding: 5px 15px;
-            border-radius: 15px;
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 6px 16px;
+            border-radius: 20px;
             font-size: 0.85rem;
+            font-weight: 500;
         }
 
         /* Education Section */
+        .education-section {
+            padding: 80px 0;
+            background: #f8fafc;
+        }
+
         .education-timeline {
-            max-width: 800px;
-            margin: 0 auto;
+            max-width: 900px;
+            margin: 50px auto 0;
         }
 
-        .education-item {
+        .education-card {
             background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-            border-left: 4px solid #667eea;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 25px;
+            border-left: 5px solid #3b82f6;
+            transition: all 0.3s;
         }
 
-        .education-item h3 {
-            color: #2d3748;
-            margin-bottom: 5px;
+        .education-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
         }
 
-        .education-item .institution {
-            color: #667eea;
+        .education-card h3 {
+            color: #1e293b;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .education-card .institution {
+            color: #3b82f6;
             font-weight: 600;
-            margin-bottom: 5px;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
         }
 
-        .education-item .year {
-            color: #999;
-            font-size: 0.9rem;
+        .education-card .year {
+            color: #94a3b8;
+            font-size: 0.95rem;
         }
 
         /* Contact Section */
-        .contact-info {
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            max-width: 600px;
-            margin: 0 auto;
+        .contact-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
             text-align: center;
         }
 
-        .contact-item {
-            padding: 15px 0;
-            font-size: 1.1rem;
+        .contact-section h2 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
         }
 
-        .contact-item a {
-            color: #667eea;
+        .contact-section .underline {
+            background: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 50px auto 0;
+        }
+
+        .contact-card {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s;
+        }
+
+        .contact-card:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-5px);
+        }
+
+        .contact-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .contact-card a {
+            color: white;
             text-decoration: none;
-            transition: color 0.3s;
+            word-break: break-all;
         }
 
-        .contact-item a:hover {
-            color: #764ba2;
+        .contact-card a:hover {
+            text-decoration: underline;
         }
 
         /* Footer */
         footer {
-            background: #2d3748;
+            background: #1e293b;
             color: white;
             text-align: center;
             padding: 30px 0;
-            margin-top: 60px;
         }
 
-        /* Responsive */
+        footer p {
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
-            h1 {
+            .hero h1 {
                 font-size: 2rem;
             }
 
-            .tagline {
-                font-size: 1rem;
+            .hero .subtitle {
+                font-size: 1.2rem;
             }
 
-            .social-links {
-                flex-direction: column;
-                align-items: center;
+            .nav-links {
+                display: none;
             }
 
-            .about-content, .contact-info {
-                padding: 25px;
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .projects-grid,
+            .skills-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
+    <!-- Navigation -->
+    <nav>
         <div class="container">
-            <div class="profile-img">SA</div>
-            <h1>Shivam Anand</h1>
-            <p class="tagline">Aspiring Data Analyst | Data Science Student</p>
-            <div class="social-links">
-                <a href="mailto:anandshivam255@gmail.com">Email</a>
-                <a href="https://www.linkedin.com/in/shivam-anand-a66181140" target="_blank">LinkedIn</a>
-                <a href="https://github.com/shiv1anand" target="_blank">GitHub</a>
+            <div class="logo">Shivam Anand</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Shivam Anand</h1>
+                <p class="subtitle">Data Analyst</p>
+                <p class="tagline">Aspiring Data Analyst pursuing M.Sc in Data Science (AI & ML specialization) with hands-on experience in Python, SQL, and Exploratory Data Analysis. Transforming raw data into meaningful insights that drive informed decision-making.</p>
+                <div class="contact-buttons">
+                    <a href="mailto:anandshivam255@gmail.com" class="btn btn-primary">📧 Email Me</a>
+                    <a href="https://www.linkedin.com/in/shivam-anand-a66181140" target="_blank" class="btn btn-secondary">LinkedIn</a>
+                    <a href="https://github.com/shiv1anand" target="_blank" class="btn btn-secondary">GitHub</a>
+                </div>
             </div>
         </div>
-    </header>
+    </section>
 
     <!-- About Section -->
-    <section id="about">
+    <section id="about" class="about-section">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <div class="section-header">
+                <h2>About Me</h2>
+                <div class="underline"></div>
+            </div>
             <div class="about-content">
-                <p>I am pursuing M.Sc in Data Science with specialization in AI & ML, with hands-on experience in Python, SQL, and Exploratory Data Analysis. I am skilled in data cleaning, data preprocessing, and visualization using Pandas, NumPy, Matplotlib, and Seaborn.</p>
-                <p>With a strong analytical mindset, I focus on extracting actionable insights from structured datasets. I am actively seeking Data Analyst or Data Science roles where I can contribute to data-driven decision making.</p>
+                <p>Welcome to my portfolio! I'm thrilled to share my passion for data analytics with you. I am pursuing M.Sc in Data Science with specialization in AI & ML from Woolf University, Canterbury, and hold a B.E. in Electronics & Communication Engineering from CMR Institute of Technology, Bangalore.</p>
+                <p>I am skilled in data cleaning, data preprocessing, and visualization using Pandas, NumPy, Matplotlib, and Seaborn. With a strong analytical mindset, I focus on extracting actionable insights from structured datasets through Exploratory Data Analysis and SQL queries.</p>
+                <p>While I may not have traditional organizational experience, I have successfully completed several business and technical projects that showcase my ability to analyze data and deliver impactful results. My goal is to make data accessible to everyone and use my skills to tell stories with data that inform and inspire positive change.</p>
+                <p>I am actively seeking Data Analyst or Data Science roles where I can contribute to data-driven decision making and help organizations thrive in today's data-driven landscape!</p>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills">
+    <section id="skills" class="skills-section">
         <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
+            <div class="section-header">
+                <h2>Technical Skills</h2>
+                <div class="underline"></div>
+            </div>
             <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Programming</h3>
-                    <ul>
+                <div class="skill-card">
+                    <h3><span class="icon">💻</span> Programming & Querying</h3>
+                    <ul class="skill-list">
                         <li>Python</li>
                         <li>SQL (PostgreSQL)</li>
                     </ul>
                 </div>
-                <div class="skill-category">
-                    <h3>Data Analysis</h3>
-                    <ul>
+                <div class="skill-card">
+                    <h3><span class="icon">📊</span> Data Analysis & Processing</h3>
+                    <ul class="skill-list">
                         <li>Pandas</li>
                         <li>NumPy</li>
                         <li>MS Excel</li>
                     </ul>
                 </div>
-                <div class="skill-category">
-                    <h3>Visualization</h3>
-                    <ul>
+                <div class="skill-card">
+                    <h3><span class="icon">📈</span> Data Visualization</h3>
+                    <ul class="skill-list">
                         <li>Matplotlib</li>
                         <li>Seaborn</li>
                     </ul>
                 </div>
-                <div class="skill-category">
-                    <h3>Concepts</h3>
-                    <ul>
+                <div class="skill-card">
+                    <h3><span class="icon">🎯</span> Core Concepts</h3>
+                    <ul class="skill-list">
                         <li>Data Cleaning</li>
-                        <li>EDA</li>
-                        <li>Business Analysis</li>
+                        <li>Exploratory Data Analysis (EDA)</li>
+                        <li>Aggregations & Joins</li>
+                        <li>Business Data Analysis</li>
                     </ul>
                 </div>
             </div>
@@ -354,58 +537,113 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
+    <section id="projects" class="projects-section">
         <div class="container">
-            <h2 class="section-title">Projects</h2>
+            <div class="section-header">
+                <h2>Portfolio Projects</h2>
+                <div class="underline"></div>
+            </div>
             <div class="projects-grid">
+                <!-- Project 1 -->
                 <div class="project-card">
-                    <h3>Suspect Motion Detection System</h3>
-                    <p>Detection of unusual ATM activities such as overcrowding and tampering using PIR, vibration, and door sensors integrated with Raspberry Pi. Alert mechanisms using GSM module and real-time monitoring.</p>
-                    <div class="project-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Raspberry Pi</span>
-                        <span class="tag">IoT</span>
+                    <div class="project-header">
+                        <h3>Exploratory Data Analysis using Python</h3>
+                    </div>
+                    <div class="project-body">
+                        <p>Comprehensive data analysis project focused on extracting meaningful insights from structured datasets through systematic exploration and visualization.</p>
+                        
+                        <h4>Key Achievements:</h4>
+                        <ul>
+                            <li>Performed thorough data cleaning and preprocessing using Pandas to ensure data quality and consistency</li>
+                            <li>Conducted exploratory analysis to identify trends, patterns, and outliers in the dataset</li>
+                            <li>Created compelling visualizations using Matplotlib and Seaborn to communicate findings effectively</li>
+                            <li>Generated actionable insights that can drive business decisions</li>
+                        </ul>
+
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">NumPy</span>
+                            <span class="tag">Matplotlib</span>
+                            <span class="tag">Seaborn</span>
+                            <span class="tag">EDA</span>
+                        </div>
                     </div>
                 </div>
 
+                <!-- Project 2 -->
                 <div class="project-card">
-                    <h3>Exploratory Data Analysis (EDA)</h3>
-                    <p>Comprehensive data cleaning and preprocessing using Pandas. Exploratory analysis to identify trends and patterns with visualization using Matplotlib and Seaborn.</p>
-                    <div class="project-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Pandas</span>
-                        <span class="tag">Matplotlib</span>
-                        <span class="tag">Seaborn</span>
+                    <div class="project-header">
+                        <h3>SQL Data Analysis Practice</h3>
+                    </div>
+                    <div class="project-body">
+                        <p>Hands-on SQL project demonstrating proficiency in querying and analyzing structured datasets for business insights.</p>
+                        
+                        <h4>Skills Developed:</h4>
+                        <ul>
+                            <li>Wrote complex SQL queries using SELECT, WHERE, GROUP BY, and HAVING clauses</li>
+                            <li>Performed advanced JOIN operations to combine data from multiple tables</li>
+                            <li>Applied aggregation functions to summarize and analyze business metrics</li>
+                            <li>Filtered and transformed data to answer specific business questions</li>
+                            <li>Analyzed business-style datasets to uncover valuable insights</li>
+                        </ul>
+
+                        <div class="project-tags">
+                            <span class="tag">SQL</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Data Analysis</span>
+                            <span class="tag">Joins</span>
+                            <span class="tag">Aggregations</span>
+                        </div>
                     </div>
                 </div>
 
+                <!-- Project 3 -->
                 <div class="project-card">
-                    <h3>SQL Data Analysis Practice</h3>
-                    <p>SQL queries using SELECT, WHERE, GROUP BY, HAVING, and JOIN operations. Performed aggregations and filtering on structured datasets for business-style insights.</p>
-                    <div class="project-tags">
-                        <span class="tag">SQL</span>
-                        <span class="tag">PostgreSQL</span>
-                        <span class="tag">Data Analysis</span>
+                    <div class="project-header">
+                        <h3>Suspect Motion Detection System</h3>
+                    </div>
+                    <div class="project-body">
+                        <p>IoT-based security system designed to detect unusual ATM activities and provide real-time alerts for enhanced security monitoring.</p>
+                        
+                        <h4>Technical Implementation:</h4>
+                        <ul>
+                            <li>Developed detection algorithms for unusual activities such as overcrowding and tampering attempts</li>
+                            <li>Integrated multiple sensors (PIR, vibration, door sensors) with Raspberry Pi for comprehensive monitoring</li>
+                            <li>Implemented alert mechanisms using GSM module and buzzer for immediate notification</li>
+                            <li>Created real-time monitoring system using Python for continuous surveillance</li>
+                        </ul>
+
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Raspberry Pi</span>
+                            <span class="tag">IoT</span>
+                            <span class="tag">Security</span>
+                            <span class="tag">Real-time Systems</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- ADD MORE PROJECTS HERE -->
-                <!-- Copy the project-card div above and modify the content -->
+                <!-- ADD MORE PROJECTS HERE - Just copy the project-card div above -->
+                
             </div>
         </div>
     </section>
 
     <!-- Education Section -->
-    <section id="education">
+    <section id="education" class="education-section">
         <div class="container">
-            <h2 class="section-title">Education</h2>
+            <div class="section-header">
+                <h2>Education</h2>
+                <div class="underline"></div>
+            </div>
             <div class="education-timeline">
-                <div class="education-item">
+                <div class="education-card">
                     <h3>M.Sc in Data Science</h3>
                     <p class="institution">AI & ML Specialization | Woolf University, Canterbury</p>
                     <p class="year">2025 - 2026</p>
                 </div>
-                <div class="education-item">
+                <div class="education-card">
                     <h3>B.E. in Electronics & Communication Engineering</h3>
                     <p class="institution">CMR Institute of Technology, Bangalore</p>
                     <p class="year">2018</p>
@@ -415,21 +653,33 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact" class="contact-section">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    📧 <a href="mailto:anandshivam255@gmail.com">anandshivam255@gmail.com</a>
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <div class="underline"></div>
+            </div>
+            <p style="margin-bottom: 20px; font-size: 1.1rem;">Feel free to reach out to me. I am always open to discussing new projects, opportunities, or collaborations in the field of data analytics!</p>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="icon">📧</div>
+                    <h3>Email</h3>
+                    <a href="mailto:anandshivam255@gmail.com">anandshivam255@gmail.com</a>
                 </div>
-                <div class="contact-item">
-                    📞 +91 9620545267
+                <div class="contact-card">
+                    <div class="icon">📞</div>
+                    <h3>Phone</h3>
+                    <a href="tel:+919620545267">+91 9620545267</a>
                 </div>
-                <div class="contact-item">
-                    🔗 <a href="https://www.linkedin.com/in/shivam-anand-a66181140" target="_blank">LinkedIn Profile</a>
+                <div class="contact-card">
+                    <div class="icon">💼</div>
+                    <h3>LinkedIn</h3>
+                    <a href="https://www.linkedin.com/in/shivam-anand-a66181140" target="_blank">linkedin.com/in/shivam-anand</a>
                 </div>
-                <div class="contact-item">
-                    💻 <a href="https://github.com/shiv1anand" target="_blank">GitHub Profile</a>
+                <div class="contact-card">
+                    <div class="icon">💻</div>
+                    <h3>GitHub</h3>
+                    <a href="https://github.com/shiv1anand" target="_blank">github.com/shiv1anand</a>
                 </div>
             </div>
         </div>
@@ -438,7 +688,8 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 Shivam Anand. All rights reserved.</p>
+            <p>&copy; 2026 Shivam Anand. All Rights Reserved.</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">Built with passion for data analytics</p>
         </div>
     </footer>
 </body>
